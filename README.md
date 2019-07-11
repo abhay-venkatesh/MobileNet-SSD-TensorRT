@@ -10,6 +10,10 @@ TensorRT-Mobilenet-SSD can run 50fps on the Nvidia TX2.
 
 3. OpenCV
 
+4. Install Optimized BLAS
+```bash
+sudo apt install libopenblas-dev
+```
 
 ## Execution
 
