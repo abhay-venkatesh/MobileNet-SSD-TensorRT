@@ -1,21 +1,17 @@
 # MobileNet-SSD-TensorRT
-**To accelerate mobileNet-ssd with tensorRT**
 
-**TensorRT-Mobilenet-SSD can run 50fps on jetson tx2**
+TensorRT-Mobilenet-SSD can run 50fps on the Nvidia TX2.
 
----
+## Pre-requisites
 
-**Requierments:**
+1. TensorRT4
 
-1.tensorRT4
+2. cuDNN7
 
-2.cudnn7
+3. OpenCV
 
-3.opencv
 
----
-
-**Run:**
+## Execution
 
 ```shell
 cmake .
@@ -23,21 +19,7 @@ make
 ./build/bin/mobileNet
 ```
 
----
-
-**Reference:**
-
-https://github.com/saikumarGadde/tensorrt-ssd-easy
-
-https://github.com/chuanqi305/MobileNet-SSD
-
-I replaced depthwise with group_conv,because group_conv  has been optimized in cudnn7
-
-I retrianed mobileNet-SSD,my number of classfication is 5
-
----
-
-**TODO:**
+## TODO
 
 - [x] To save serialized model 
 - [x] To solve the bug of getting different result with same input
@@ -46,12 +28,12 @@ I retrianed mobileNet-SSD,my number of classfication is 5
 
 
 
+## Notes
+
 *If want to decrease the time cost of "imread",you could rebuild OpenCV[https://github.com/jetsonhacks/buildOpenCVTX2]*
 
 *Added producer-consumer*
 
-
-
-**The bug has been fixed**
+*The bug has been fixed*
 
 ![image](testPic/test1.png)
